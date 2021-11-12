@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>flask_WTF</title>
+    </head>
+    <body>
+        <h1>TEST FORM</h1>
+        <form action="{{url_for('login')}}" method="post">
+            
+            {{ loginform.hidden_tag() }}
+            نام و نام خانوادگی : {{ loginform.name_family() }}<br>
+            {{ loginform.username.label}} : {{loginform.username()}}<br>
+            {{ loginform.password.label }} : {{ loginform.password() }}<br>
+            <input type="submit" value="Login">
+        </form> <br/>
+        <Div>
+            <form action="{{url_for('login')}}" method="post">
+            
+                {{ loginform.hidden_tag() }}
+                نام و نام خانوادگی : {{ loginform.name_family() }}<br>
+                {{ loginform.username.label}} : {{loginform.username()}}<br>
+                {{ loginform.password.label }} : {{ loginform.password() }}<br>
+                <input type="submit" value="sign up">
+            </form>
+        </Div>
+    </body>
+</html>
